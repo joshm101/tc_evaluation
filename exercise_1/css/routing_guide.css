@@ -3,8 +3,14 @@ body {
 }
 
 .all-content-wrapper {
-  width: 300px;
-  height: 470px;
+  /*
+    compensate for 1px border
+    on all sides
+  */
+  width: 298px;
+  height: 468px;
+  max-width: 300px;
+  max-height: 470px;
   display: inline-block;
   border: solid 1px #9c9c9c;
   border-radius: 11px 0 0 0;
@@ -64,7 +70,7 @@ body {
 }
 
 .main-content {
-
+  height: 405px;
 
 }
 
@@ -89,7 +95,7 @@ body {
 }
 
 .nav-path-location {
-  color: #95a65a;
+  color: #70893b;
   display: inline;  
 }
 
@@ -152,7 +158,7 @@ body {
 
 .topics-choice a:hover {
   background-color: #eefadb;
-  color: #97a15f;
+  color: #70893b;
 }
 
 .topics-choice a:active {
@@ -187,13 +193,19 @@ body {
 }
 
 .lower-wrapper {
+  height: 425px;
 }
 
 .bottom-content-wrapper {
   background-color: #e5e5e5;
-  margin-top: 1px;
-  height: 20px;
+  height: 19px;
 }
+
+.bottom-content {
+  height: 19px;  
+}
+
+
 
 .bottom-content img {
   margin-left: 5px;
