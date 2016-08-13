@@ -1,5 +1,5 @@
 body {
-  font-family: Roboto; 
+  font-family: 'Roboto'; 
 }
 
 .all-content-wrapper {
@@ -62,7 +62,7 @@ body {
 }
 
 .main-content-wrapper {
-  height: 405px;  
+  height: 404px;  
 }
 
 .bottom-content-wrapper {
@@ -70,7 +70,7 @@ body {
 }
 
 .main-content {
-  height: 405px;
+  height: 404px;
 
 }
 
@@ -109,10 +109,12 @@ body {
   display: inline;
 }
 
+
+
 .topics-list {
   list-style: none;
   padding-left: 0;
-  margin-bottom: 40px;
+  margin-bottom: 37px;
 }
 
 .topics-list-wrap {
@@ -198,11 +200,11 @@ body {
 
 .bottom-content-wrapper {
   background-color: #e5e5e5;
-  height: 19px;
+  height: 20px;
 }
 
 .bottom-content {
-  height: 19px;  
+  height: 20px;  
 }
 
 

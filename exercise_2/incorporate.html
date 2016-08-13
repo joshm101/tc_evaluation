@@ -1,0 +1,253 @@
+<head>
+  <link type="text/css" 
+        rel="stylesheet" 
+        href="css/incorporate.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">      
+  <link href="https://fonts.googleapis.com/css?family=Roboto" 
+        rel="stylesheet">
+  <!--The font in the pre-chat survey sample is NOT Roboto-->
+</head>
+
+<div class="all-content-wrapper">
+  <div class="top-wrapper">
+    <div class="top-black-bg-wrap">
+      <div class="close-btn-col">
+         <a href="#">
+           <img id="close-btn-img"
+                src="assets/btn-close.png">
+         </a>
+      </div>
+    </div>
+        <div class="bottom-green-bar">  
+        </div>
+    <div class="brand-logo-col">
+      <img id="brand-logo-img" 
+           src="assets/logo-best-brands.png">
+    </div>
+  </div>
+  <div class="lower-wrapper">
+    <div class="main-content-wrapper">
+      <div class="main-content">
+        <div class="main-content-upper">
+          <!--nav-location-wrap will initially
+              be shown. It will be set to
+              display: none when the user selects
+              Billing and Payments -->
+          <div class="nav-location-wrap">
+            <div class="nav-location">
+              <!-- If we were to dynamically 
+                   populate the navigation bar,
+                   we could use these classes
+                   to style based on whether or not
+                   we are at the last iteration
+                   of our loop
+                   
+                   Last iteration
+                         ==
+                   Current location 
+                   (in this case 'Mobile')-->
+              <div class="nav-path-location">
+                <a href="#">Home</a> <div class="nav-slash">/</div>
+              </div>
+              <div class="nav-path-location">
+                <a href="#">Existing Service</a> <div class="nav-slash">/</div>
+              </div>
+              <div class="nav-current-location">
+                Mobile
+              </div>
+            </div>
+          </div>        
+          <div class="question">
+            <b>Which Mobile topic would you like help with?</b>
+          </div>
+        </div>
+        <div class="main-content-lower">
+          <!--topics-list-wrap will initially
+              be shown. It will be set to display: none
+              when the user selects Billing and Payments-->
+          <div class="topics-list-wrap">
+            <ul class="topics-list">
+              <li class="topics-choice" onclick="topicClick(this);">
+                <a href="#">
+                  <div class="topics-choice-icon-wrap">
+                    <img class="topic-icon" 
+                         src="assets/icons/Bill-100.png">
+                  </div>
+                  <div class="topics-choice-text">
+                    Billing and Payments
+                  </div>
+                </a>
+              </li>
+              <li class="topics-choice" onclick="topicClick(this);">
+                <a href="#">
+                  <div class="topics-choice-icon-wrap">
+                    <img class="topic-icon"
+                         src="assets/icons/ic_help_outline_black_24px.svg">
+                  </div>
+                  <div class="topics-choice-text">
+                    Technical Support
+                  </div>
+                </a>
+              </li>
+              <li class="topics-choice" onclick="topicClick(this);">
+                <a href="#">
+                  <div class="topics-choice-icon-wrap">
+                    <img class="topic-icon"
+                         src="assets/icons/ic_exit_to_app_black_24px.svg">
+                  </div>
+                  <div class="topics-choice-text">
+                    Account Login Support
+                  </div> 
+                </a>
+              </li>
+              <li class="topics-choice" onclick="topicClick(this);">
+                <a href="#">
+                  <div class="topics-choice-icon-wrap">
+                    <img class="topic-icon"
+                         src="assets/icons/Settings 3-104.png">
+                  </div>
+                  <div class="topics-choice-text">
+                    Other
+                  </div>    
+                </a>
+              </li>
+            </ul>
+            <!--back-btn-wrap will intiailly be set to
+                display: inline. The button will be hidden
+                when the user selects Billing and Payments
+                in the routing guide-->
+            <div class="back-btn-wrap">
+              <a href="#">
+                <div class="back-btn-icon-wrap">
+                  <i class="material-icons"
+                     style="color: #c8eb15">arrow_back</i>
+                </div>
+                <div class="back-btn-text">
+                  Back
+                </div>
+              </a>
+            </div>
+          </div>
+          
+          <!--Initially, input-form will be set to display:none.
+              The form will be displayed (set to display: inline)
+              when the user selects Billing and Payments
+              in the routing guide.-->
+          <div class="input-form" style="display: none;">
+            <form>
+              <div class="text-input-item">
+                <div class="input-field-label">
+                  <label for="full-name">Full Name:*</label>
+                </div>
+                <div class="input-field-container">
+                 <input class="input-field" type="text" 
+                                          name="full-name"
+                                          placeholder="John Doe"
+                                          value> 
+                 <img class="input-field-icon" 
+                      src="assets/icons/icon-form-avatar.png">
+                 <img class="input-field-icon-alert name-err-alert" 
+                      src="assets/icons/icon-form-error.png">                  
+                </div>
+                <div class="input-req-msg name-empty">
+                  Full Name is a required field.
+                </div>                
+              </div>
+              <div class="text-input-item">
+                <div class="input-field-label">
+                  <label for="phone-number">Mobile Phone Number:*</label>
+                </div>
+                <div class="input-field-container">
+                 <input class="input-field" type="text" 
+                                          name="phone-number"
+                                          placeholder="ex: 123-123-1234"
+                                          value> 
+                 <img class="input-field-icon" 
+                      src="assets/icons/icon-form-phone.png">
+                 <img id="number-err-alert" 
+                      class="input-field-icon-alert number-err-alert" 
+                      src="assets/icons/icon-form-error.png">                       
+                </div>
+                <div class="input-req-msg number-empty">
+                  Mobile number is a required field.
+                </div>
+                <div class="input-phone-msg number-err">
+                  Please enter a valid phone number.
+                </div>                
+              </div>    
+              <div class="text-input-item">
+                <div class="input-field-label">
+                  <label>State:*</label>
+                </div>
+                <div class="input-field-container">
+                  <select class="input-select-field" name="state-sel">
+                    <option value="" disabled selected hidden>Select one</option>
+                    <option value="CA">California</option>
+                  </select>
+                 <img class="input-field-icon-alert select-err-alert" 
+                      src="assets/icons/icon-form-error.png">
+                <div class="input-req-msg select-empty">
+                  State is a required field.
+                </div>                      
+                </div>                 
+              </div>
+              <div class="text-input-item ca-dynamic-field">
+                <div class="input-field-label">
+                  <label>Was your phone purchased in CA?*</label>
+                </div>              
+                <div class="input-field-container" id="conditional-input">
+                  <select class="input-select-field yes-no-ca" 
+                          name="yes-no-sel">
+                    <option value="" disabled selected hidden>Select one</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                  </select>
+                 <img class="input-field-icon-alert dynamic-select-err-alert" 
+                      src="assets/icons/icon-form-error.png">                    
+                </div>
+                <!--future error support for field-->
+                <div class="input-req-msg select-dynamic-empty">
+                  This is a required field.
+                </div>                  
+              </div>
+              <div class="text-input-item">
+                <div class="input-field-label">
+                  <label>Describe your question:*</label>
+                </div>
+                <div class="input-field-container">
+                  <textarea name="desc" class="input-textarea-field"></textarea>
+                 <img class="input-field-icon-alert-ta ta-err-alert" 
+                      src="assets/icons/icon-form-error.png">                   
+                </div>
+                <div class="input-req-msg desc-empty">
+                  Description is a required field.
+                </div>                 
+              </div>
+              <div class="btn-req-wrap">
+                <div class="submit-btn-wrap">
+                  <button type="button"
+                          class="start-chat-btn"
+                          onclick="startChatHandler()">Start Chat</button>
+                </div>
+                <div class="asterisk-meaning">
+                  <div class="single-asterisk-red">*</div>
+                  <div class="req-field">Required field</div>
+                </div>
+              </div>
+            </form>
+          </div>        
+        </div>
+      </div>
+    </div>  
+    <div class="bottom-content-wrapper">
+      <div class="bottom-content">
+        <a href="http://www.touchcommerce.com/">
+          <img src="assets/logo-tc.png">
+        </a>
+      </div>
+    </div>    
+  </div>
+</div>
+
+<script src="js/incorporate.js"></script>

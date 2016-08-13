@@ -1,5 +1,3 @@
-
-
 body {
   font-family: 'Roboto'; 
 }
@@ -10,7 +8,15 @@ body {
     on all sides
   */
   width: 298px;
-  height: 623px;
+  
+  /* height will initially be set
+     to 468px for routing guide  
+     
+     height will be set to 623px
+     when user selects Billing and Payments
+     to display pre-chat survey
+     */
+  height: 468px;
   display: inline-block;
   border: solid 1px #9c9c9c;
   border-radius: 11px 0 0 0;
@@ -66,9 +72,7 @@ input,textarea,select {
   background-color: #c2ea00
 }
 
-.question {
-  margin-bottom: 20px;
-}
+
 
 .main-content-upper {
   padding-top: 25px;
@@ -76,9 +80,140 @@ input,textarea,select {
   padding-right: 25px;
 }
 
+  /* height will initially be set
+     to 404px for routing guide  
+     
+     height will be set to 559px
+     when user selects Billing and Payments
+     to display pre-chat survey
+     */
+
 .main-content-wrapper {
-  height: 559px;
+  height: 404px;
 }
+
+.main-content {
+  height: 404px; 
+}
+
+/********************
+  Specific to routing-guide
+********************/
+.nav-location-wrap {
+  margin-bottom: 25px;
+}
+
+.nav-location {
+  display: inline;
+  font-size: 13px;
+}
+
+.nav-slash {
+  display: inline;
+  color: #726f76
+}
+
+.nav-path-location {
+  color: #70893b;
+  display: inline;  
+}
+
+.nav-path-location a {
+  text-decoration: none;  
+  color: #95a65a;
+}
+
+.nav-current-location {
+  color: #9e9e9e;  
+  display: inline;
+}
+
+.topics-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 37px;
+}
+
+.topics-list-wrap {
+  margin-bottom: 15px;  
+}
+
+.topics-choice-text {
+  display: inline; 
+  vertical-align: middle;
+}
+
+.topics-choice-icon-wrap {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+  height: 32px;
+  width: 32px;
+  margin-left: 40px;
+}
+
+.topic-icon {
+  height: 32px;
+  width: 32px;
+  opacity: .4;
+  display: inline;
+
+  vertical-align: middle;
+}
+
+.topics-choice {
+  line-height: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.topics-choice a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  width: 100%;
+}
+
+.topics-choice a:hover {
+  background-color: #eefadb;
+  color: #70893b;
+}
+
+.topics-choice a:active {
+  background-color: #9ad000;
+  color: white;
+}
+
+.back-btn-icon-wrap{
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+  vertical-align: middle;
+}
+
+.back-btn-wrap {
+  padding-left: 40px; 
+  height: 25px;
+  width: 70px;
+}
+
+.back-btn-wrap a {
+  text-decoration: none;
+  height: 100%;
+  display: block;
+}
+
+.back-btn-text {
+  color: #a4a4a4;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/************
+  Specific to pre-chat
+*************/
 
 .input-form {
   height: 478px;
@@ -121,6 +256,46 @@ input,textarea,select {
   bottom: 7.5px;
 }
 
+.input-field-icon-alert {
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  right: 15px;
+  bottom: 10.5px; 
+  display: none;  
+}
+
+.input-field-icon-alert-ta {
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  right: 15px;
+  top: 10.5px;
+  display: none;
+}
+
+.input-req-msg {
+  font-size: 10px;
+  color: #f5a4a1; 
+  float: right;
+  text-align: end;
+  display: inline;
+  width: 200px;
+  margin-top: 5px;
+  display: none;
+}
+
+.input-phone-msg {
+  font-size: 10px;
+  color: #f5a4a1; 
+  float: right;
+  text-align: end;
+  display: none;
+  width: 200px;
+  margin-top: 5px;
+  
+}
+
 .text-input-item {
   margin-bottom: 25px;  
 }
@@ -151,6 +326,14 @@ input,textarea,select {
    height: 35px;
    width: 100%;
    padding-left: 2px;
+}
+
+.yes-no-sel {
+}
+
+.ca-dynamic-field {
+  display: none;
+  margin-bottom: 25px;  
 }
 
 .input-select-field:focus {
@@ -212,11 +395,12 @@ input,textarea,select {
   display: inline-block;
 }
 
+/***********************/
 
 .bottom-content-wrapper {
   background-color: #e5e5e5;
  
-  height: 20px;
+  height: 19px;
 }
 
 .bottom-content img {
@@ -225,4 +409,5 @@ input,textarea,select {
 }
 
 .lower-wrapper {
+  height: 425px;
 }
