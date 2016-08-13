@@ -166,6 +166,11 @@ function startChatHandler() {
     if (numberField.value.match(phoneno)) {
       chatReached(); 
     } else {
+      numberField.style.backgroundColor = "#ffcbcc";
+      var inputAlertIcon = document
+                            .getElementsByClassName
+                              ("number-err-alert")[0];
+      inputAlertIcon.style.display = "inline";      
       var numberFormatError = document
                                 .getElementsByClassName
                                     ("input-phone-msg")[0];
